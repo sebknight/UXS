@@ -1,0 +1,104 @@
+@import url("https:/fonts.googleapis.com/css?family=Norican");
+@import url("https:/fonts.googleapis.com/css?family=Lekton:400,400i|Norican");
+body {
+  background: #FFFDED;
+  font-family: "Lekton", sans-serif; }
+
+ul {
+  list-style: none; }
+
+h1, h2, h3 {
+  color: #9A8274; }
+
+h1 {
+  font-family: "Norican", cursive; }
+
+nav {
+  background: #F97A32;
+  color: #FFFDED;
+  font-family: "Lekton", sans-serif;
+  text-align: center; }
+  nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+  nav li {
+    display: inline-block;
+    padding-left: 5%;
+    background: #116392; }
+
+#menu {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+  align-items: center; }
+
+form {
+  width: 40%;
+  background: #F97A32; }
+
+.Category {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+   supported by Chrome and Opera */ }
+
+.Category-header {
+  padding: 10px; }
+
+.Category-body {
+  overflow: hidden;
+  height: 0px;
+  transition: height 0.5s ease-in-out; }
+  .Category-body.is-open {
+    height: 40%; }
+
+.Subcategory-header {
+  padding: 10px; }
+
+.Subcategory-body {
+  overflow: hidden;
+  height: 0px;
+  transition: height 0.5s ease-in-out; }
+  .Subcategory-body.is-open {
+    height: 40%; }
+
+#cart {
+  display: none;
+  color: #9A8274;
+  align-items: center;
+  border: 1px solid #F97A32; }
+  #cart.is-visible {
+    top: 0;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    flex: 1; }
+
+.Subcategory-body {
+  background-color: #F97A32;
+  opacity: 50%; }
+
+    /*.background {
+        background-size: 100% 100%;
+        background-image: url("../images/bg_mobile.png");
+        padding-left: 20%;
+  //  }
+//}
+
+/* #menu-item_olives {
+height: 200px;
+width: 100px;
+background-color: red;
+} */
