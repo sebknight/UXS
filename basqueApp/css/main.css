@@ -1,44 +1,8 @@
 @import url("https:/fonts.googleapis.com/css?family=Norican");
 @import url("https:/fonts.googleapis.com/css?family=Lekton:400,400i|Norican");
-body {
-  background: #FFFDED;
-  font-family: "Lekton", sans-serif; }
-
-ul {
-  list-style: none; }
-
-h1, h2, h3 {
-  color: #9A8274; }
-
-h1 {
-  font-family: "Norican", cursive; }
-
-nav {
-  background: #F97A32;
-  color: #FFFDED;
+.container {
   font-family: "Lekton", sans-serif;
-  text-align: center; }
-  nav ul {
-    margin: 0;
-    padding: 0;
-    list-style: none; }
-  nav li {
-    display: inline-block;
-    padding-left: 5%;
-    background: #116392; }
-
-#menu {
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  flex: 2;
-  align-items: center; }
-
-form {
-  width: 40%;
-  background: #F97A32; }
-
-.Category {
+  color: #000;
   -webkit-touch-callout: none;
   /* iOS Safari */
   -webkit-user-select: none;
@@ -53,52 +17,64 @@ form {
   /* Non-prefixed version, currently
    supported by Chrome and Opera */ }
 
-.Category-header {
-  padding: 10px; }
-
-.Category-body {
-  overflow: hidden;
-  height: 0px;
-  transition: height 0.5s ease-in-out; }
-  .Category-body.is-open {
-    height: 40%; }
-
-.Subcategory-header {
-  padding: 10px; }
-
-.Subcategory-body {
-  overflow: hidden;
-  height: 0px;
-  transition: height 0.5s ease-in-out; }
-  .Subcategory-body.is-open {
-    height: 40%; }
-
-#cart {
-  display: none;
-  color: #9A8274;
+.heading {
   align-items: center;
-  border: 1px solid #F97A32; }
-  #cart.is-visible {
-    top: 0;
-    width: 100%;
-    height: 50%;
-    display: flex;
-    flex-direction: column;
-    flex: 1; }
+  text-align: center; }
+  .heading h1 {
+    margin: 0.25em 0 0 0; }
+  .heading h3 {
+    margin: 0; }
 
-.Subcategory-body {
-  background-color: #F97A32;
-  opacity: 50%; }
+.navigation {
+  background: #F97A32;
+  font-family: "Lekton", sans-serif;
+  text-align: center;
+  margin: 0; }
 
-    /*.background {
-        background-size: 100% 100%;
-        background-image: url("../images/bg_mobile.png");
-        padding-left: 20%;
-  //  }
-//}
+.navigation__item {
+  margin: 0;
+  list-style: none;
+  display: inline-block;
+  padding: 0.5em;
+  background: #116392; }
 
-/* #menu-item_olives {
-height: 200px;
-width: 100px;
-background-color: red;
-} */
+.dropdown {
+  display: none;
+  align-items: center;
+  background: #F97A32; }
+
+.is-active {
+  color: #FFFDED; }
+
+.is-visible {
+  top: 0;
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  flex: 1; }
+
+.menu {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+  align-items: center; }
+
+.menu-item {
+  text-align: right; }
+
+.menu-item {
+  width: 80%;
+  align-items: center;
+  text-align: right;
+  padding-right: 1em;
+  background: #F97A32;
+  border: #FFFDED solid 0.5em; }
+
+.btn {
+  font-family: "Lekton", sans-serif;
+  width: 80%;
+  border: solid 0.25em #116392;
+  text-align: center;
+  background-color: #FFFDED; }

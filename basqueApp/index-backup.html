@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <title>Menu</title>
+  </head>
+  <body>
+    <nav class="navigation">
+      <ul>
+        <li>Home</li>
+        <li id="call-staff"><i id="bell" class="fas fa-bell"></i></li>
+        <li id="order"><i id="utensils" class="fas fa-utensils"></i></li>
+        <li id="language">EN</li>
+      </ul>
+    </nav>
+    <!-- nav ENDS -->
+    <div id="cart" class="dropdown">
+      <h3>Your order</h3>
+        <ul>
+          <!-- <li>
+            Marinated olives $9
+          </li>
+        </ul> -->
+      <h3>Total $5</h3>
+    </div>
+    <!-- cart ENDS -->
+    <div id="staff" class="dropdown">
+      <h3>Help is on the way!</h3>
+    </div>
+    <!-- call staff ENDS -->
+    <!-- <div id="language-settings" class="dropdown">
+      <h3>MĀO</h3>
+    </div> -->
+    <!-- menu begins -->
+    <div id="menu" class="menu">
+      <div class="heading">
+        <h1>Welcome to Basque!</h1>
+        <h3>Check out our featured items</h3>
+      </div>
+      <div id="almonds" class="menu-item">
+        <h3>Spiced Almonds</h3>
+        <div id="almonds-open" class="dropdown">
+          <img src="images/almonds-small.png" alt="almonds">
+          <h3>Vegan, gluten-free</h3>
+          <button type="button" name="order" class="btn">Add to order</button>
+        </div>
+      </div>
+      <div class="menu-item">
+        <h3>Carne Platter</h3>
+      </div>
+      <div class="menu-item">
+        <h3>Pizza Bread</h3>
+      </div>
+      <div class="menu-item">
+        <h3>Crema Catalana</h3>
+      </div>
+      <div class="menu-item">
+        <h3>Angry Peaches APA</h3>
+      </div>
+      <div class="menu-item">
+        <h3>Peach Sangria</h3>
+      </div>
+    </div>
+    <!-- menu ENDS -->
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

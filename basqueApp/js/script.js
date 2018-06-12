@@ -1,49 +1,49 @@
 // Call this function when the document is ready
 $(document).ready(function () {
 
-//  var items = ["#menu-item_olives"];
-
 // Toggle cart visibility
-  $('#order').click(function () {
-    $('#cart').toggleClass('is-visible');
+  $('.navigation__item--cart').click(function () {
+      $('.dropdown--cart').toggleClass('is-visible');
+      $('.navigation__item--cart').toggleClass('is-active');
+  }); // toggle cart ENDS
 
-  });
+// Toggle call staff butten
+  $('.navigation__item--bell').click(function () {
+    $('.dropdown--help').toggleClass('is-visible');
+    $('.navigation__item--bell').toggleClass('is-active');
+  }); // toggle call staff button ENDS
+
+// Toggle language
+  $('.navigation__item--language').click(function (){
+    $(this).text($(this).text() == 'MĀO' ? 'ENG' : 'MĀO');
+  }); // toggle language ENDS
+
+// Toggle menu item dropdown
+  $('.menu-item').click(function (){
+    $('.dropdown--menu-item').toggleClass('is-visible');
+  }); // toggle menu item dropdown ENDS
+
+// //Adjust number of items
+//   $(".btn__add").click(function(){
+//       var counter = parseInt($("#hiddenVal").val());
+//       counter++;
+//       $("#hiddenVal").val(counter);
+//       $("#theCount").text(counter);
+//   }); //Adjust number of items ENDS
 
 
-  $('#menu').click(function () {
-      $('#category-1-header').toggleClass('is-open');
 
-  });
+}); //script ENDS
 
-  // Add a click listener to the element matching selector #category-1-header
-  $('#category-1-header').click(function () {
 
-    // Toggle the class `is-open` on the element matching selector `#subcategory-1-body
-    $('#subcategory-1-header').toggleClass('is-open');
-  });
 
-  $('#subcategory-1-header').click(function () {
+//
+//
+// $(".btn__add").click(function(){
+//     var counter = parseInt($("#hiddenVal").val());
+//     counter++;
+//     $("#hiddenVal").val(counter);
+//     $("#theCount").text(counter);
+// });
 
-    $('#subcategory-1-body').toggleClass('is-open');
-  });
-
-  $('#subcategory-2-header').click(function () {
-
-    $('#subcategory-2-body').toggleClass('is-open');
-  });
-
-  $('#subcategory-3-header').click(function () {
-
-    $('#subcategory-3-body').toggleClass('is-open');
-  });
-
-// Add to cart example
-//$('#menu-item_olives').click(function () {
-  // Add an object to cart array
-/*  cart.push({
-    name: "Olives",
-    price: "$5.00",
-  });
-}); */
-
-});
+//doc.ready function ENDS
