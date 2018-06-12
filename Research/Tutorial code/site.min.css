@@ -1,1 +1,0 @@
-.Category{-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.Category-header{padding:10px;background-color:#eee}.Category-body{background-color:#aaa;overflow:hidden;height:0;transition:height .5s ease-in-out}.Category-body.is-open{height:300px}
