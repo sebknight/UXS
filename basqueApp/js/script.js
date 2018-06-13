@@ -20,17 +20,29 @@ $(document).ready(function () {
 
 // Toggle menu item dropdown
   $('.menu-item').click(function (){
-    $('.dropdown--menu-item').toggleClass('is-visible');
+    $('.dropdown--menu-item').addClass('is-visible');
   }); // toggle menu item dropdown ENDS
 
-// //Adjust number of items
-//   $(".btn__add").click(function(){
-//       var counter = parseInt($("#hiddenVal").val());
-//       counter++;
-//       $("#hiddenVal").val(counter);
-//       $("#theCount").text(counter);
-//   }); //Adjust number of items ENDS
+    $('.button--order').click(function (){
+      $('.dropdown--menu-item').removeClass('is-visible');
+    }); // toggle menu item dropdown ENDS
 
+//Adjust number of items
+  $('.button--plus').click(function(){
+      var counter = parseInt($('.item-number__value').val());
+      counter++;
+      $('.item-number__value').val(counter);
+      $('.item-number').text(counter);
+  });
+    $('.button--minus').click(function(){
+        var counter = parseInt($('.item-number__value').val());
+        counter--;
+              $('.item-number__value').val(counter);
+              if ($('.item-number__value').val!=0) {
+              $('.item-number').text(counter);
+        }
+        });
+   //Adjust number of items ENDS
 
 
 }); //script ENDS

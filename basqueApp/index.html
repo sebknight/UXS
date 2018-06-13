@@ -2,36 +2,32 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="sass/main.min.css">
+    <!-- <link rel="stylesheet" href="css/reset.css"> -->
     <title>Basque</title>
   </head>
-  <body>
+  <body class="page">
     <div class="container">
       <nav class="navigation">
         <ul>
-            <li class="navigation__item">Home</li>
             <li class="navigation__item navigation__item--bell"><i class="fas fa-bell"></i></li>
             <li class="navigation__item navigation__item--cart"><i class="fas fa-utensils"></i></li>
             <li class="navigation__item navigation__item--language">ENG</li>
-          </ul>
-        </nav>
+        </ul>
+      </nav>
       <!-- nav ENDS -->
       <div class="dropdown dropdown--cart">
         <h3>Your order</h3>
-        <h3>Total </h3>
       </div>
       <!-- cart ENDS -->
       <div class="dropdown dropdown--help">
         <h3>Help is on the way!</h3>
       </div>
       <!-- call staff ENDS -->
-      <!-- <div id="language-settings" class="dropdown">
-        <h3>MĀO</h3>
-      </div> -->
       <!-- menu begins -->
       <div class="menu">
-        <div class="heading">
+        <div class="menu__heading">
           <h1>Welcome to Basque!</h1>
           <h3>Check out our featured items</h3>
         </div>
@@ -40,14 +36,18 @@
           <div class="dropdown dropdown--menu-item">
             <img class="item-image" src="images/almonds-small.png" alt="almonds">
             <h3>Vegan, gluten-free</h3>
-            <button type="button" name="order" class="btn btn__subtract">-</button>
-            <button type="button" name="order" class="btn btn__order">Add to order</button>
-            <button type="button" name="order" class="btn btn__add">-</button>
-            <!-- <button type="button" name="order" class="btn btn__add">+</button>
-            <input type="hidden" id="hiddenVal" value="0" -->
-
+            <div class="button">
+              <button type="button" name="order" class="button button--minus"><i class="fas fa-minus"></i></button>
+              <h2 class="item-number">0</h2>
+              <button type="button" name="order" class="button button--plus"><i class="fas fa-plus"></i></button>
+              <button type="button" name="order" class="button button--order">Add to order</button>
+            </div>
+            <!-- buttons END -->
+            <input type="hidden" class="item-number__value" value="0">
           </div>
+          <!-- dropdown ENDS -->
         </div>
+        <!-- menu item ENDS -->
         <div class="menu-item">
           <h3>Carne Platter</h3>
         </div>
@@ -65,9 +65,8 @@
         </div>
       </div>
     <!-- menu ENDS -->
-    <!-- container ENDS -->
     </div>
-
+    <!-- container ENDs -->
     <script src="js/jquery.min.js"></script>
     <script src="js/script.js"></script>
   </body>

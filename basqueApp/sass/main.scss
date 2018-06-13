@@ -1,23 +1,23 @@
-//Mixins
-//media queries
+// Mixins
+// media queries
 // @mixin phone {
 // @media only screen {
-//   (min-width: 300px) {}
+//   (min-width: 300px)
 //   }
 // }
 //
 // @mixin tablet {
 // @media only screen {
-//   (min-width: 700px) {}
+//   (min-width: 700px)
 //   }
 // }
 //
 // @mixin desktop {
 // @media only screen {
-//   (min-width: 1000px) {}
+//   (min-width: 1000px)
 //   }
 // }
-//
+
 // @mixin for-phone-only {
 //   @media (max-width: 599px) { @content; }
 // }
@@ -35,16 +35,20 @@
 // }
 
 
-//prevent highlighting/selecting of text
-// @mixin user-select($value) {
-//   -webkit-touch-callout: $value; /* iOS Safari */
-//     -webkit-user-select: $value; /* Safari */
-//      -khtml-user-select: $value; /* Konqueror HTML */
-//        -moz-user-select: $value; /* Firefox */
-//         -ms-user-select: $value; /* Internet Explorer/Edge */
-//             user-select: $value; /* Non-prefixed version, currently
-//                                   supported by Chrome and Opera */
-// }
+// prevent highlighting/selecting of text
+@mixin user-select($value) {
+  -webkit-touch-callout: $value; /* iOS Safari */
+    -webkit-user-select: $value; /* Safari */
+     -khtml-user-select: $value; /* Konqueror HTML */
+       -moz-user-select: $value; /* Firefox */
+        -ms-user-select: $value; /* Internet Explorer/Edge */
+            user-select: $value; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+@mixin menu-item {
+
+}
 
 //Colors
 $primary-color: #FFFDED; //Cream
@@ -53,105 +57,108 @@ $text-color: #000; //Black
 $highlight: #53C4AD; //Blue
 $active: #EAA514; //Mustard
 
+//Borders
+$item-border:
+
 //Google Fonts
 @import url('https://fonts.googleapis.com/css?family=Molengo');
-// $header-font: 'Norican', cursive;
 $body-font: 'Molengo', sans-serif;
 
-// body {
-//   margin: 0;
-//   padding: 0;
-// }
-.container {
-  width: 100%;
+
+.page {
   margin: 0;
   padding: 0;
-  background-color: $active;
-  background-image: url("https://transparenttextures.com/patterns/pineapple-cut.png");
+  border: 0;
   font-family: $body-font;
   color: $text-color;
-  // border-spacing: border-box;
-  // @include user-select(none);
+  @include user-select(none);
 }
 
-// .heading {
-//   align-items: center;
-//   text-align: center;
-//     h1 {
-//       margin: 0.25em 0 0 0;
-//     }
-//     h3 {
-//       margin: 0;
-//     }
-// }
-//
-// .navigation {
-//   margin: 0;
-//   background: $secondary-color;
-//   font-family: $body-font;
-//   text-align: center;
-//   align-items: center;
-// }
-//
-// .navigation__item {
-//       list-style: none;
-//       display: inline-block;
-//       padding: 0.5em;
-//       background: $highlight;
-//       }
-//
-// .dropdown {
-//       display: none;
-//       align-items: center;
-//       background: $secondary-color;
-//     }
-//
-// .is-active {
-//         color: $primary-color;
-//         background: $active;
-//       }
-//
-// .is-visible {
-//           top: 0;
-//           width: 100%;
-//           height: 50%;
-//           display: flex;
-//           flex-direction: column;
-//           flex: 1;
-//         }
-//
-// .menu {
-//     background: $primary-color;
-//     border: dashed 3px $secondary-color;
-//     border-radius: 5px;
-//     margin: 0 auto;
-//     display: flex;
-//     flex-direction: column;
-//     flex: 2;
-//     align-items: center;
-//   }
-//
-// .menu-item {
-//   width: 80%;
-//   align-items: center;
-//   text-align: right;
-//   padding-right: 1em;
-//   margin-bottom: 0.5em;
-//   background: $secondary-color;
-//   border: $highlight solid 0.25em;
-//   border-radius: 5px;
-// }
-//
-// .item-image {
-//   width: 80%;
-//   align-items: center;
-// }
-//
-//
-// .btn {
-//   font-family: $body-font;
-//   width: 80%;
-//   border: solid 0.25em $highlight;
-//   text-align: center;
-//   background-color: $primary-color;
-// }
+.container {
+  background-color: $active;
+  background-image: url("https://transparenttextures.com/patterns/pineapple-cut.png");
+}
+
+.navigation {
+  margin: 0;
+  padding: 0;
+  background: $secondary-color;
+  font-family: $body-font;
+  text-align: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.navigation__item {
+      margin: 0;
+      list-style: none;
+      display: inline-block;
+      padding: 0.5em;
+      background: $highlight;
+      }
+
+.dropdown {
+      display: none;
+      margin: 0;
+      align-items: center;
+      background: $secondary-color;
+    }
+
+.menu {
+    width: 85%;
+    background: $primary-color;
+    border: solid 2px $secondary-color;
+    border-top: 0px;
+    border-bottom: 0px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+    align-items: center;
+  }
+
+.menu__heading {
+  text-align: center;
+}
+
+.menu-item {
+  width: 80%;
+  text-align: right;
+  padding-right: 1em;
+  margin-bottom: 0.5em;
+  background: $secondary-color;
+  border: $highlight solid 0.25em;
+  border-radius: 5px;
+}
+
+.item-image {
+  width: 80%;
+  background-size: contain;
+}
+
+.button {
+  display: inline-block;
+  font-family: $body-font;
+  border: 0;
+  align-items: center;
+  background-color: $highlight;
+}
+
+.button--order {
+  background: $primary-color;
+
+}
+
+// JQuery states
+.is-visible {
+          width: 100%;
+          height: 50%;
+          display: flex;
+          flex-direction: column;
+          flex: 1;
+        }
+
+.is-active {
+        color: $primary-color;
+        background: $active;
+      }
