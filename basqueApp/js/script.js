@@ -1,13 +1,13 @@
 // Call this function when the document is ready
 $(document).ready(function () {
 
-// Toggle cart visibility
+// // Toggle cart visibility
   $('.navigation__item--cart').click(function () {
       $('.dropdown--cart').toggleClass('is-visible');
       $('.navigation__item--cart').toggleClass('is-active');
   }); // toggle cart ENDS
 
-// Toggle call staff butten
+// Toggle call staff button
   $('.navigation__item--bell').click(function () {
     $('.dropdown--help').toggleClass('is-visible');
     $('.navigation__item--bell').toggleClass('is-active');
@@ -19,43 +19,36 @@ $(document).ready(function () {
   }); // toggle language ENDS
 
 // Toggle menu item dropdown
-  $('.menu-item').click(function (){
-    $('.dropdown--menu-item').addClass('is-visible');
-  }); // toggle menu item dropdown ENDS
+   $('.button--order').click(function (event){
+             event.stopPropagation();
+             $('.dropdown--menu-item').hide();
+    });
 
-    $('.button--order').click(function (){
-      $('.dropdown--menu-item').removeClass('is-visible');
-    }); // toggle menu item dropdown ENDS
+    $('.item-name').click(function (event){
+      $('.dropdown--menu-item').toggle();
+    });  //toggle item ENDS
 
 //Adjust number of items
-  $('.button--plus').click(function(){
-      var counter = parseInt($('.item-number__value').val());
-      counter++;
-      $('.item-number__value').val(counter);
-      $('.item-number').text(counter);
-  });
     $('.button--minus').click(function(){
         var counter = parseInt($('.item-number__value').val());
         counter--;
-              $('.item-number__value').val(counter);
-              if ($('.item-number__value').val!=0) {
-              $('.item-number').text(counter);
-        }
-        });
-   //Adjust number of items ENDS
+        $('.item-number').text(counter);
+        // prevent value going below 0
+          if (counter > 0){
+            $('.item-number__value').val(counter); }
+            $('.item-number').text(counter);
+    });
+    
+  $('.button--plus').click(function(){
+      var counter = parseInt($('.item-number__value').val());
+      counter++;
+      $('.item-number').text(counter);
+      $('.item-number__value').val(counter);
+  });
 
 
-}); //script ENDS
+// Adjust number of items ENDS
 
 
 
-//
-//
-// $(".btn__add").click(function(){
-//     var counter = parseInt($("#hiddenVal").val());
-//     counter++;
-//     $("#hiddenVal").val(counter);
-//     $("#theCount").text(counter);
-// });
-
-//doc.ready function ENDS
+}); //doc.ready function ENDS

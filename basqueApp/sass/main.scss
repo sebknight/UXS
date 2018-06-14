@@ -46,23 +46,26 @@
                                   supported by Chrome and Opera */
 }
 
-@mixin menu-item {
-
-}
+// @mixin menu-item {
+//
+// }
 
 //Colors
 $primary-color: #FFFDED; //Cream
 $secondary-color: #F97A32; //Orange
-$text-color: #000; //Black
+$text-color: #363534; //Black
 $highlight: #53C4AD; //Blue
 $active: #EAA514; //Mustard
 
 //Borders
-$item-border:
+@mixin item-border {
+border-bottom: $highlight solid 0.3em;
+border-right: $highlight solid 0.3em;
+}
 
 //Google Fonts
-@import url('https://fonts.googleapis.com/css?family=Molengo');
-$body-font: 'Molengo', sans-serif;
+@import url('https://fonts.googleapis.com/css?family=Didact+Gothic');
+$body-font: 'Didact Gothic', sans-serif;
 
 
 .page {
@@ -122,14 +125,16 @@ $body-font: 'Molengo', sans-serif;
 }
 
 .menu-item {
+  @include item-border;
   width: 80%;
   text-align: right;
   padding-right: 1em;
   margin-bottom: 0.5em;
   background: $secondary-color;
-  border: $highlight solid 0.25em;
   border-radius: 5px;
 }
+
+
 
 .item-image {
   width: 80%;
