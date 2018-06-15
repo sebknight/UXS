@@ -98,7 +98,11 @@ $body-font: 'Didact Gothic', sans-serif;
       display: inline-block;
       padding: 0.5em;
       background: $highlight;
-      }
+    }
+.navigation__item--timer {
+  display: none;}
+
+
 
 .dropdown {
       display: none;
@@ -106,6 +110,7 @@ $body-font: 'Didact Gothic', sans-serif;
       align-items: center;
       background: $secondary-color;
     }
+
 
 .menu {
     width: 85%;
@@ -149,9 +154,8 @@ $body-font: 'Didact Gothic', sans-serif;
   background-color: $highlight;
 }
 
-.button--order {
+.button--order, .button--confirm {
   background: $primary-color;
-
 }
 
 // JQuery states
