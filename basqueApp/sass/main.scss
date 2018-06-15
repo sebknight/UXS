@@ -1,36 +1,36 @@
 // Mixins
 // media queries
-@mixin phone {
-@media only screen {
-  (min-width: 300px){
-    @content;
-    }
-  }
-}
-
-@mixin tablet {
-@media only screen {
-  (min-width: 600px){
-    @content;
-    }
-  }
-}
-
-@mixin desktop {
-@media only screen {
-  (min-width: 1000px){
-    @content;
-    }
-  }
-}
-
-@mixin big-desktop {
-@media only screen {
-  (min-width: 1800px){
-    @content;
-    }
-  }
-}
+// @mixin phone {
+// @media only screen {
+//   (min-width: 300px){
+//     @content;
+//     }
+//   }
+// }
+//
+// @mixin tablet {
+// @media only screen {
+//   (min-width: 600px){
+//     @content;
+//     }
+//   }
+// }
+//
+// @mixin desktop {
+// @media only screen {
+//   (min-width: 1000px){
+//     @content;
+//     }
+//   }
+// }
+//
+// @mixin big-desktop {
+// @media only screen {
+//   (min-width: 1800px){
+//     @content;
+//     }
+//   }
+// }
 
 // @mixin for-phone-only {
 //   @media (max-width: 599px) { @content; }
@@ -73,7 +73,8 @@ border-right: $highlight solid 0.3em;
 
 
 //Colors
-$primary-color: #FFFDED; //Cream
+// $primary-color: #FFFDED; //Cream
+$primary-color: black;
 $secondary-color: #F97A32; //Orange
 $text-color: #363534; //Black
 $highlight: #53C4AD; //Blue
@@ -127,12 +128,12 @@ $body-font: 'Didact Gothic', sans-serif;
   }
 
 .menu {
+  @include zero-margin;
     width: 85%;
     background: $primary-color;
     border: solid 2px $secondary-color;
     border-top: 0px;
     border-bottom: 0px;
-    margin: 0 auto;
     display: flex;
     flex-direction: column;
     flex: 2;
@@ -162,8 +163,9 @@ $body-font: 'Didact Gothic', sans-serif;
   display: inline-block;
   font-family: $body-font;
   border: 0;
+  padding: 5em;
   align-items: center;
-  background-color: $highlight;
+  background-color: $primary-color;
 }
 //
 // .button--order .button--confirm .button--cancel {
