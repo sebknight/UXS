@@ -1,22 +1,36 @@
 // Mixins
 // media queries
-// @mixin phone {
-// @media only screen {
-//   (min-width: 300px)
-//   }
-// }
-//
-// @mixin tablet {
-// @media only screen {
-//   (min-width: 700px)
-//   }
-// }
-//
-// @mixin desktop {
-// @media only screen {
-//   (min-width: 1000px)
-//   }
-// }
+@mixin phone {
+@media only screen {
+  (min-width: 300px){
+    @content;
+    }
+  }
+}
+
+@mixin tablet {
+@media only screen {
+  (min-width: 600px){
+    @content;
+    }
+  }
+}
+
+@mixin desktop {
+@media only screen {
+  (min-width: 1000px){
+    @content;
+    }
+  }
+}
+
+@mixin big-desktop {
+@media only screen {
+  (min-width: 1800px){
+    @content;
+    }
+  }
+}
 
 // @mixin for-phone-only {
 //   @media (max-width: 599px) { @content; }
@@ -46,17 +60,6 @@
                                   supported by Chrome and Opera */
 }
 
-// @mixin menu-item {
-//
-// }
-
-//Colors
-$primary-color: #FFFDED; //Cream
-$secondary-color: #F97A32; //Orange
-$text-color: #363534; //Black
-$highlight: #53C4AD; //Blue
-$active: #EAA514; //Mustard
-
 //Borders
 @mixin item-border {
 border-bottom: $highlight solid 0.3em;
@@ -67,6 +70,15 @@ border-right: $highlight solid 0.3em;
   margin: 0;
   padding: 0;
 }
+
+
+//Colors
+$primary-color: #FFFDED; //Cream
+$secondary-color: #F97A32; //Orange
+$text-color: #363534; //Black
+$highlight: #53C4AD; //Blue
+$active: #EAA514; //Mustard
+
 
 //Google Fonts
 @import url('https://fonts.googleapis.com/css?family=Didact+Gothic');
@@ -141,8 +153,6 @@ $body-font: 'Didact Gothic', sans-serif;
   border-radius: 5px;
 }
 
-
-
 .item-image {
   width: 80%;
   background-size: contain;
@@ -155,10 +165,10 @@ $body-font: 'Didact Gothic', sans-serif;
   align-items: center;
   background-color: $highlight;
 }
-
-.button--order, .button--confirm {
-  background: $primary-color;
-}
+//
+// .button--order .button--confirm .button--cancel {
+//   background: $primary-color;
+// }
 
 // JQuery states
 .is-visible {

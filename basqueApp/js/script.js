@@ -1,8 +1,6 @@
 // Call this function when the document is ready
 $(document).ready(function () {
 
-
-
 // // Toggle cart visibility
   $('.navigation__item--cart').click(function () {
       $('.dropdown__cart').toggleClass('is-visible');
