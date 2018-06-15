@@ -17,52 +17,132 @@
         </ul>
       </nav>
       <!-- nav ENDS -->
-      <div class="dropdown dropdown--cart">
-        <h3>Your order</h3>
+      <div class="dropdown dropdown__cart">
+        <h2>Your order</h2>
+        <button type="button" name="button" class="button button--confirm">Send to kitchen</button>
+        <div class="dropdown dropdown__cart--confirm">
+          <h2>Order confirmed!</h2>
+        </div>
       </div>
       <!-- cart ENDS -->
-      <div class="dropdown dropdown--help">
+      <div class="dropdown dropdown__help">
         <h3>Help is on the way!</h3>
       </div>
       <!-- call staff ENDS -->
+      <div class="dropdown dropdown__timer">
+        Order ready in 15:00
+        <button type="button" name="button" class="button button--cancel">Cancel order</button>
+      </div>
       <!-- menu begins -->
       <div class="menu">
         <div class="menu__heading">
           <h1>Welcome to Basque!</h1>
           <h3>Check out our featured items</h3>
         </div>
-        <div class="menu-item">
-          <h3 class="item-name">Spiced Almonds</h3>
-          <div class="dropdown dropdown--menu-item">
-            <img class="item-image" src="images/almonds-small.png" alt="almonds">
+        <div class="menu-item menu-item__almonds">
+          <h3 class="item-name item-name--almonds">Spiced Almonds</h3>
+          <div class="dropdown dropdown__menu-item dropdown__menu-item--almonds">
+            <img class="item-image item-image--almonds" src="images/almonds.jpg" alt="Spiced almonds">
             <h3>Vegan, gluten-free</h3>
             <div class="button">
               <button type="button" name="order" class="button button--minus"><i class="fas fa-minus"></i></button>
-              <h2 class="item-number">0</h2>
+              <h2 class="item-number">1</h2>
               <button type="button" name="order" class="button button--plus"><i class="fas fa-plus"></i></button>
               <button type="button" name="order" class="button button--order">Add to order</button>
-              <input type="hidden" class="item-number__value" value="0">
+              <input type="hidden" class="item-number__value" value="1">
+            </div>
+            <!-- buttons END -->
+          </div>
+          <!-- dropdown ENDS -->
+        </div>
+        <!-- almonds ENDS -->
+        <div class="menu-item menu-item__platter">
+          <h3 class="item-name item-name--platter">Carne Platter</h3>
+          <div class="dropdown dropdown__menu-item dropdown__menu-item--platter">
+            <img class="item-image item-image--platter" src="images/platter.jpg" alt="carne platter">
+            <h3>Selected meats, cheeses, and breads</h3>
+            <div class="button">
+              <button type="button" name="order" class="button button--minus"><i class="fas fa-minus"></i></button>
+              <h2 class="item-number">1</h2>
+              <button type="button" name="order" class="button button--plus"><i class="fas fa-plus"></i></button>
+              <button type="button" name="order" class="button button--order">Add to order</button>
+              <input type="hidden" class="item-number__value" value="1">
+            </div>
+            <!-- buttons END -->
+          </div>
+          <!-- dropdown ENDS -->
+        </div>
+        <!-- platter ENDS -->
+        <div class="menu-item menu-item__pizza">
+          <h3 class="item-name item-name--pizza">Pizza Bread</h3>
+          <div class="dropdown dropdown__menu-item dropdown__menu-item--pizza">
+            <img class="item-image item-image--pizza" src="images/pizza.jpg" alt="pizza bread">
+            <h3>with mozzarella and basil</h3>
+            <div class="button">
+              <button type="button" name="order" class="button button--minus"><i class="fas fa-minus"></i></button>
+              <h2 class="item-number">1</h2>
+              <button type="button" name="order" class="button button--plus"><i class="fas fa-plus"></i></button>
+              <button type="button" name="order" class="button button--order">Add to order</button>
+              <input type="hidden" class="item-number__value" value="1">
             </div>
             <!-- buttons END -->
           </div>
           <!-- dropdown ENDS -->
         </div>
         <!-- menu item ENDS -->
-        <div class="menu-item">
-          <h3>Carne Platter</h3>
+        <div class="menu-item menu-item__crema">
+          <h3 class="item-name item-name--crema">Crema Catalana</h3>
+          <div class="dropdown dropdown__menu-item dropdown__menu-item--crema">
+            <img class="item-image item-image--crema" src="images/crema.jpg" alt="almonds">
+            <h3>Spanish custard</h3>
+            <div class="button">
+              <button type="button" name="order" class="button button--minus"><i class="fas fa-minus"></i></button>
+              <h2 class="item-number">1</h2>
+              <button type="button" name="order" class="button button--plus"><i class="fas fa-plus"></i></button>
+              <button type="button" name="order" class="button button--order">Add to order</button>
+              <input type="hidden" class="item-number__value" value="1">
+            </div>
+            <!-- buttons END -->
+          </div>
+          <!-- dropdown ENDS -->
         </div>
-        <div class="menu-item">
-          <h3>Pizza Bread</h3>
+        <!-- crema ENDS -->
+        <div class="menu-item menu-item__sangria">
+          <h3 class="item-name item-name--sangria">Classic Sangria</h3>
+          <div class="dropdown dropdown__menu-item dropdown__menu-item--sangria">
+            <img class="item-image item-image--sangria" src="images/sangria.jpg" alt="classic sangria">
+            <h3>Red wine, summer fruits and juice</h3>
+            <div class="button">
+              <button type="button" name="order" class="button button--minus"><i class="fas fa-minus"></i></button>
+              <h2 class="item-number">1</h2>
+              <button type="button" name="order" class="button button--plus"><i class="fas fa-plus"></i></button>
+              <button type="button" name="order" class="button button--order">Add to order</button>
+              <input type="hidden" class="item-number__value" value="1">
+            </div>
+            <!-- buttons END -->
+          </div>
+          <!-- dropdown ENDS -->
         </div>
-        <div class="menu-item">
-          <h3>Crema Catalana</h3>
+        <!-- sangria ENDS -->
+        <div class="menu-item menu-item__beer">
+          <h3 class="item-name item-name--beer">Angry Peaches APA</h3>
+          <div class="dropdown dropdown__menu-item dropdown__menu-item--beer">
+            <img class="item-image item-image--beer" src="images/beer.jpg" alt="Angry Peaches APA">
+            <h3>Brewed by Garage Project</h3>
+            <div class="button">
+              <button type="button" name="order" class="button button--minus"><i class="fas fa-minus"></i></button>
+              <h2 class="item-number">1</h2>
+              <button type="button" name="order" class="button button--plus"><i class="fas fa-plus"></i></button>
+              <button type="button" name="order" class="button button--order">Add to order</button>
+              <input type="hidden" class="item-number__value" value="1">
+            </div>
+            <!-- buttons END -->
+          </div>
+          <!-- dropdown ENDS -->
         </div>
-        <div class="menu-item">
-          <h3>Angry Peaches APA</h3>
-        </div>
-        <div class="menu-item">
-          <h3>Peach Sangria</h3>
-        </div>
+        <!-- beer ENDS -->
+
+
       </div>
     <!-- menu ENDS -->
     </div>

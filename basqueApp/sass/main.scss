@@ -2,19 +2,33 @@
 // media queries
 // @mixin phone {
 // @media only screen {
-//   (min-width: 300px)
+//   (min-width: 300px){
+//     @content;
+//     }
 //   }
 // }
 //
 // @mixin tablet {
 // @media only screen {
-//   (min-width: 700px)
+//   (min-width: 600px){
+//     @content;
+//     }
 //   }
 // }
 //
 // @mixin desktop {
 // @media only screen {
-//   (min-width: 1000px)
+//   (min-width: 1000px){
+//     @content;
+//     }
+//   }
+// }
+//
+// @mixin big-desktop {
+// @media only screen {
+//   (min-width: 1800px){
+//     @content;
+//     }
 //   }
 // }
 
@@ -46,22 +60,26 @@
                                   supported by Chrome and Opera */
 }
 
-// @mixin menu-item {
-//
-// }
-
-//Colors
-$primary-color: #FFFDED; //Cream
-$secondary-color: #F97A32; //Orange
-$text-color: #363534; //Black
-$highlight: #53C4AD; //Blue
-$active: #EAA514; //Mustard
-
 //Borders
 @mixin item-border {
 border-bottom: $highlight solid 0.3em;
 border-right: $highlight solid 0.3em;
 }
+
+@mixin zero-margin {
+  margin: 0;
+  padding: 0;
+}
+
+
+//Colors
+// $primary-color: #FFFDED; //Cream
+$primary-color: black;
+$secondary-color: #F97A32; //Orange
+$text-color: #363534; //Black
+$highlight: #53C4AD; //Blue
+$active: #EAA514; //Mustard
+
 
 //Google Fonts
 @import url('https://fonts.googleapis.com/css?family=Didact+Gothic');
@@ -69,12 +87,11 @@ $body-font: 'Didact Gothic', sans-serif;
 
 
 .page {
-  margin: 0;
-  padding: 0;
+  @include zero-margin;
+  @include user-select(none);
   border: 0;
   font-family: $body-font;
   color: $text-color;
-  @include user-select(none);
 }
 
 .container {
@@ -83,8 +100,7 @@ $body-font: 'Didact Gothic', sans-serif;
 }
 
 .navigation {
-  margin: 0;
-  padding: 0;
+  @include zero-margin;
   background: $secondary-color;
   font-family: $body-font;
   text-align: center;
@@ -98,22 +114,26 @@ $body-font: 'Didact Gothic', sans-serif;
       display: inline-block;
       padding: 0.5em;
       background: $highlight;
-      }
-
-.dropdown {
-      display: none;
-      margin: 0;
-      align-items: center;
-      background: $secondary-color;
     }
 
+.navigation__item--timer {
+  display: none;
+}
+
+.dropdown {
+  @include zero-margin;
+  display: none;
+  align-items: center;
+  background: $secondary-color;
+  }
+
 .menu {
+  @include zero-margin;
     width: 85%;
     background: $primary-color;
     border: solid 2px $secondary-color;
     border-top: 0px;
     border-bottom: 0px;
-    margin: 0 auto;
     display: flex;
     flex-direction: column;
     flex: 2;
@@ -134,8 +154,6 @@ $body-font: 'Didact Gothic', sans-serif;
   border-radius: 5px;
 }
 
-
-
 .item-image {
   width: 80%;
   background-size: contain;
@@ -145,14 +163,14 @@ $body-font: 'Didact Gothic', sans-serif;
   display: inline-block;
   font-family: $body-font;
   border: 0;
+  padding: 5em;
   align-items: center;
-  background-color: $highlight;
+  background-color: $primary-color;
 }
-
-.button--order {
-  background: $primary-color;
-
-}
+//
+// .button--order .button--confirm .button--cancel {
+//   background: $primary-color;
+// }
 
 // JQuery states
 .is-visible {
