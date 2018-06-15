@@ -1,6 +1,8 @@
 // Call this function when the document is ready
 $(document).ready(function () {
 
+
+
 // // Toggle cart visibility
   $('.navigation__item--cart').click(function () {
       $('.dropdown__cart').toggleClass('is-visible');
@@ -12,11 +14,6 @@ $(document).ready(function () {
     $('.dropdown__help').toggleClass('is-visible');
     $('.navigation__item--bell').toggleClass('is-active');
   }); // toggle call staff button ENDS
-
-  $('.button--confirm').click(function (){
-    $('.dropdown__timer').toggleClass('is-visible');
-    $('.navigation__item--timer').show();
-  })
 
 
 // Toggle language
@@ -35,6 +32,15 @@ $(document).ready(function () {
       $(this).next().toggle();
     });
 
+    $('.button--confirm').click(function (){
+      $('.dropdown__cart--confirm').toggleClass('is-visible');
+      $('.dropdown__timer').addClass('is-visible');
+    });
+
+    $('.button--cancel').click(function (){
+      $('.dropdown__timer').removeClass('is-visible');
+      $('.dropdown__cart--confirm').removeClass('is-visible');
+    });
 
 //Adjust number of items
     $('.button--minus').click(function(){

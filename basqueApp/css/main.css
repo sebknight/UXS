@@ -2,9 +2,6 @@
 .page {
   margin: 0;
   padding: 0;
-  border: 0;
-  font-family: "Didact Gothic", sans-serif;
-  color: #363534;
   -webkit-touch-callout: none;
   /* iOS Safari */
   -webkit-user-select: none;
@@ -17,7 +14,10 @@
   /* Internet Explorer/Edge */
   user-select: none;
   /* Non-prefixed version, currently
-   supported by Chrome and Opera */ }
+   supported by Chrome and Opera */
+  border: 0;
+  font-family: "Didact Gothic", sans-serif;
+  color: #363534; }
 
 .container {
   background-color: #EAA514;
@@ -43,8 +43,9 @@
   display: none; }
 
 .dropdown {
-  display: none;
   margin: 0;
+  padding: 0;
+  display: none;
   align-items: center;
   background: #F97A32; }
 

@@ -14,13 +14,15 @@
             <li class="navigation__item navigation__item--bell"><i class="fas fa-bell"></i></li>
             <li class="navigation__item navigation__item--cart"><i class="fas fa-utensils"></i></li>
             <li class="navigation__item navigation__item--language">ENG</li>
-            <li class="navigation__item navigation__item--timer">15:00</li>
         </ul>
       </nav>
       <!-- nav ENDS -->
       <div class="dropdown dropdown__cart">
         <h2>Your order</h2>
         <button type="button" name="button" class="button button--confirm">Send to kitchen</button>
+        <div class="dropdown dropdown__cart--confirm">
+          <h2>Order confirmed!</h2>
+        </div>
       </div>
       <!-- cart ENDS -->
       <div class="dropdown dropdown__help">
@@ -28,7 +30,8 @@
       </div>
       <!-- call staff ENDS -->
       <div class="dropdown dropdown__timer">
-        <h2>Order confirmed!</h2>
+        Order ready in 15:00
+        <button type="button" name="button" class="button button--cancel">Cancel order</button>
       </div>
       <!-- menu begins -->
       <div class="menu">
@@ -39,7 +42,7 @@
         <div class="menu-item menu-item__almonds">
           <h3 class="item-name item-name--almonds">Spiced Almonds</h3>
           <div class="dropdown dropdown__menu-item dropdown__menu-item--almonds">
-            <img class="item-image item-image--almonds" src="images/almonds-small.png" alt="almonds">
+            <img class="item-image item-image--almonds" src="images/almonds.jpg" alt="Spiced almonds">
             <h3>Vegan, gluten-free</h3>
             <div class="button">
               <button type="button" name="order" class="button button--minus"><i class="fas fa-minus"></i></button>

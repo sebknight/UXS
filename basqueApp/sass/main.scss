@@ -63,18 +63,22 @@ border-bottom: $highlight solid 0.3em;
 border-right: $highlight solid 0.3em;
 }
 
+@mixin zero-margin {
+  margin: 0;
+  padding: 0;
+}
+
 //Google Fonts
 @import url('https://fonts.googleapis.com/css?family=Didact+Gothic');
 $body-font: 'Didact Gothic', sans-serif;
 
 
 .page {
-  margin: 0;
-  padding: 0;
+  @include zero-margin;
+  @include user-select(none);
   border: 0;
   font-family: $body-font;
   color: $text-color;
-  @include user-select(none);
 }
 
 .container {
@@ -83,8 +87,7 @@ $body-font: 'Didact Gothic', sans-serif;
 }
 
 .navigation {
-  margin: 0;
-  padding: 0;
+  @include zero-margin;
   background: $secondary-color;
   font-family: $body-font;
   text-align: center;
@@ -99,18 +102,17 @@ $body-font: 'Didact Gothic', sans-serif;
       padding: 0.5em;
       background: $highlight;
     }
+
 .navigation__item--timer {
-  display: none;}
-
-
+  display: none;
+}
 
 .dropdown {
-      display: none;
-      margin: 0;
-      align-items: center;
-      background: $secondary-color;
-    }
-
+  @include zero-margin;
+  display: none;
+  align-items: center;
+  background: $secondary-color;
+  }
 
 .menu {
     width: 85%;
