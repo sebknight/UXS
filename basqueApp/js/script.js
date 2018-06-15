@@ -43,23 +43,22 @@ $(document).ready(function () {
     });
 
 //Adjust number of items
+$('.button--plus').click(function(){
+  var counter =
+  parseInt($('.item-number__value').val());
+  counter++;
+  $('.item-number').text(counter);
+  $('.item-number__value').val(counter);
+});
+
     $('.button--minus').click(function(){
         var counter = parseInt($('.item-number__value').val());
+        if (counter > 0) {
         counter--;
-        $('.item-number').text(counter);
-        // prevent value going below 0
-          if (counter > 0){
-            $('.item-number__value').val(counter); }
-            $('.item-number').text(counter);
+        $('.item-number__value').text(counter);
+          $('.item-number').text(counter);
+          $('.item-number__value').val(counter);}
     });
-
-  $('.button--plus').click(function(){
-      var counter = parseInt($('.item-number__value').val());
-      counter++;
-      $('.item-number').text(counter);
-      $('.item-number__value').val(counter);
-  });
-
 
 // Adjust number of items ENDS
 
