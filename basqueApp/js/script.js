@@ -3,13 +3,16 @@ $(document).ready(function () {
 
 // // Toggle cart visibility
   $('.navigation__item--cart').click(function () {
-      $('.dropdown__cart').toggleClass('is-visible');
+      // $('.dropdown__cart').toggleClass('is-visible');
+      $('.dropdown__cart').toggle();
+
       $('.navigation__item--cart').toggleClass('is-active');
   }); // toggle cart ENDS
 
 // Toggle call staff button
   $('.navigation__item--bell').click(function () {
-    $('.dropdown__help').toggleClass('is-visible');
+    // $('.dropdown__help').toggleClass('is-visible');
+    $('.dropdown__help').toggle();
     $('.navigation__item--bell').toggleClass('is-active');
   }); // toggle call staff button ENDS
 
@@ -17,7 +20,10 @@ $(document).ready(function () {
 // Toggle language
   $('.navigation__item--language').click(function (){
     $(this).text($(this).text() == 'MĀO' ? 'ENG' : 'MĀO');
-  }); // toggle language ENDS
+  });
+  // $('.navigation__item--big--language').click(function (){
+  //   $(this).text($(this).text() == 'Te Reo Maori' ? 'English' : 'Te Reo Maori');
+  // });  // toggle language ENDS
 
 // Toggle menu item dropdown
    $('.button--order').click(function (event){
@@ -31,13 +37,19 @@ $(document).ready(function () {
     });
 
     $('.button--confirm').click(function (){
-      $('.dropdown__cart--confirm').toggleClass('is-visible');
-      $('.dropdown__timer').addClass('is-visible');
+      // $('.dropdown__cart--confirm').toggleClass('is-visible');
+      // $('.dropdown__timer').addClass('is-visible');
+      $('.dropdown__cart--confirm').toggle();
+      $('.dropdown__timer').toggle();
+
     });
 
     $('.button--cancel').click(function (){
-      $('.dropdown__timer').removeClass('is-visible');
-      $('.dropdown__cart--confirm').removeClass('is-visible');
+      // $('.dropdown__timer').removeClass('is-visible');
+      // $('.dropdown__cart--confirm').removeClass('is-visible');
+      $('.dropdown__timer').toggle();
+      $('.dropdown__cart--confirm').toggle();
+
     });
 
 //Adjust number of items

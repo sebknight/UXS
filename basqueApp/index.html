@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="sass/main.min.css">
     <!-- <link rel="stylesheet" href="css/reset.css"> -->
     <title>Basque</title>
   </head>
@@ -11,8 +11,8 @@
     <div class="container">
       <nav class="navigation">
         <ul>
-            <li class="navigation__item navigation__item--bell"><i class="fas fa-bell"></i></li>
-            <li class="navigation__item navigation__item--cart"><i class="fas fa-utensils"></i></li>
+            <li class="navigation__item navigation__item--bell"><i class="fas fa-bell"></i><h3 class="navigation__item--big"> Call staff</h3></li>
+            <li class="navigation__item navigation__item--cart"><i class="fas fa-utensils"></i><h3 class="navigation__item--big"> Your order</h3></li>
             <li class="navigation__item navigation__item--language">ENG</li>
         </ul>
       </nav>
@@ -34,17 +34,18 @@
         <button type="button" name="button" class="button button--cancel">Cancel order</button>
       </div>
       <!-- menu begins -->
-      <div class="menu">
         <div class="menu__heading">
           <h1>Welcome to Basque!</h1>
           <h3>Check out our featured items</h3>
         </div>
+      <div class="menu">
+
         <div class="menu-item menu-item__almonds">
           <h3 class="item-name item-name--almonds">Spiced Almonds</h3>
           <div class="dropdown dropdown__menu-item dropdown__menu-item--almonds">
             <img class="item-image item-image--almonds" src="images/almonds.jpg" alt="Spiced almonds">
             <h3>Vegan, gluten-free</h3>
-            <div class="button">
+            <div class="menu-item menu-item__button-area">
               <button type="button" name="order" class="button button--minus"><i class="fas fa-minus"></i></button>
               <h2 class="item-number">1</h2>
               <button type="button" name="order" class="button button--plus"><i class="fas fa-plus"></i></button>
@@ -61,13 +62,13 @@
           <div class="dropdown dropdown__menu-item dropdown__menu-item--platter">
             <img class="item-image item-image--platter" src="images/platter.jpg" alt="carne platter">
             <h3>Selected meats, cheeses, and breads</h3>
-            <div class="button">
-              <button type="button" name="order" class="button button--minus"><i class="fas fa-minus"></i></button>
-              <h2 class="item-number">1</h2>
-              <button type="button" name="order" class="button button--plus"><i class="fas fa-plus"></i></button>
-              <button type="button" name="order" class="button button--order">Add to order</button>
-              <input type="hidden" class="item-number__value" value="1">
-            </div>
+          <div class="menu-item menu-item__button-area">
+            <button type="button" name="order" class="button button--minus"><i class="fas fa-minus"></i></button>
+            <h2 class="item-number">1</h2>
+            <button type="button" name="order" class="button button--plus"><i class="fas fa-plus"></i></button>
+            <button type="button" name="order" class="button button--order">Add to order</button>
+            <input type="hidden" class="item-number__value" value="1">
+          </div>
             <!-- buttons END -->
           </div>
           <!-- dropdown ENDS -->
@@ -78,7 +79,7 @@
           <div class="dropdown dropdown__menu-item dropdown__menu-item--pizza">
             <img class="item-image item-image--pizza" src="images/pizza.jpg" alt="pizza bread">
             <h3>with mozzarella and basil</h3>
-            <div class="button">
+            <div class="menu-item menu-item__button-area">
               <button type="button" name="order" class="button button--minus"><i class="fas fa-minus"></i></button>
               <h2 class="item-number">1</h2>
               <button type="button" name="order" class="button button--plus"><i class="fas fa-plus"></i></button>
@@ -95,7 +96,7 @@
           <div class="dropdown dropdown__menu-item dropdown__menu-item--crema">
             <img class="item-image item-image--crema" src="images/crema.jpg" alt="almonds">
             <h3>Spanish custard</h3>
-            <div class="button">
+            <div class="menu-item menu-item__button-area">
               <button type="button" name="order" class="button button--minus"><i class="fas fa-minus"></i></button>
               <h2 class="item-number">1</h2>
               <button type="button" name="order" class="button button--plus"><i class="fas fa-plus"></i></button>
@@ -112,7 +113,7 @@
           <div class="dropdown dropdown__menu-item dropdown__menu-item--sangria">
             <img class="item-image item-image--sangria" src="images/sangria.jpg" alt="classic sangria">
             <h3>Red wine, summer fruits and juice</h3>
-            <div class="button">
+            <div class="menu-item menu-item__button-area">
               <button type="button" name="order" class="button button--minus"><i class="fas fa-minus"></i></button>
               <h2 class="item-number">1</h2>
               <button type="button" name="order" class="button button--plus"><i class="fas fa-plus"></i></button>
@@ -129,7 +130,7 @@
           <div class="dropdown dropdown__menu-item dropdown__menu-item--beer">
             <img class="item-image item-image--beer" src="images/beer.jpg" alt="Angry Peaches APA">
             <h3>Brewed by Garage Project</h3>
-            <div class="button">
+            <div class="menu-item menu-item__button-area">
               <button type="button" name="order" class="button button--minus"><i class="fas fa-minus"></i></button>
               <h2 class="item-number">1</h2>
               <button type="button" name="order" class="button button--plus"><i class="fas fa-plus"></i></button>
