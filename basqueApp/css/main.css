@@ -1,7 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Didact+Gothic");
 .page {
-  margin: 0;
-  padding: 0;
   -webkit-touch-callout: none;
   /* iOS Safari */
   -webkit-user-select: none;
@@ -15,6 +13,8 @@
   user-select: none;
   /* Non-prefixed version, currently
    supported by Chrome and Opera */
+  margin: 0;
+  padding: 0;
   border: 0;
   font-family: "Didact Gothic", sans-serif;
   color: #363534; }
@@ -38,9 +38,6 @@
   display: inline-block;
   padding: 0.5em;
   background: #53C4AD; }
-
-.navigation__item--timer {
-  display: none; }
 
 .dropdown {
   margin: 0;
@@ -79,12 +76,11 @@
   background-size: contain; }
 
 .button {
+  background-color: #FFFDED;
+  border: #53C4AD solid 2px;
   display: inline-block;
   font-family: "Didact Gothic", sans-serif;
-  border: 0;
-  padding: 0.5em;
-  align-items: center;
-  background-color: #53C4AD; }
+  align-items: center; }
 
 .is-visible {
   width: 100%;

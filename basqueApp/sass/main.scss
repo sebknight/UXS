@@ -2,33 +2,19 @@
 // media queries
 // @mixin phone {
 // @media only screen {
-//   (min-width: 300px){
-//     @content;
-//     }
+//   (min-width: 300px)
 //   }
 // }
 //
 // @mixin tablet {
 // @media only screen {
-//   (min-width: 600px){
-//     @content;
-//     }
+//   (min-width: 700px)
 //   }
 // }
 //
 // @mixin desktop {
 // @media only screen {
-//   (min-width: 1000px){
-//     @content;
-//     }
-//   }
-// }
-//
-// @mixin big-desktop {
-// @media only screen {
-//   (min-width: 1800px){
-//     @content;
-//     }
+//   (min-width: 1000px)
 //   }
 // }
 
@@ -73,8 +59,7 @@ border-right: $highlight solid 0.3em;
 
 
 //Colors
-// $primary-color: #FFFDED; //Cream
-$primary-color: black;
+$primary-color: #FFFDED; //Cream
 $secondary-color: #F97A32; //Orange
 $text-color: #363534; //Black
 $highlight: #53C4AD; //Blue
@@ -87,8 +72,8 @@ $body-font: 'Didact Gothic', sans-serif;
 
 
 .page {
-  @include zero-margin;
   @include user-select(none);
+  @include zero-margin;
   border: 0;
   font-family: $body-font;
   color: $text-color;
@@ -114,26 +99,22 @@ $body-font: 'Didact Gothic', sans-serif;
       display: inline-block;
       padding: 0.5em;
       background: $highlight;
-    }
-
-.navigation__item--timer {
-  display: none;
-}
+      }
 
 .dropdown {
-  @include zero-margin;
-  display: none;
-  align-items: center;
-  background: $secondary-color;
-  }
+      @include zero-margin;
+      display: none;
+      align-items: center;
+      background: $secondary-color;
+    }
 
 .menu {
-  @include zero-margin;
     width: 85%;
     background: $primary-color;
     border: solid 2px $secondary-color;
     border-top: 0px;
     border-bottom: 0px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     flex: 2;
@@ -160,17 +141,13 @@ $body-font: 'Didact Gothic', sans-serif;
 }
 
 .button {
+  background-color: $primary-color;
+  border: $highlight solid 2px;
   display: inline-block;
   font-family: $body-font;
-  border: 0;
-  padding: 5em;
+  // padding: 0.5em;
   align-items: center;
-  background-color: $primary-color;
 }
-//
-// .button--order .button--confirm .button--cancel {
-//   background: $primary-color;
-// }
 
 // JQuery states
 .is-visible {
