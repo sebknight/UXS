@@ -27,9 +27,9 @@ $(document).ready(function () {
 
 // Toggle menu item dropdown
    $('.button--order').click(function (event){
-             event.stopPropagation();
-               // $('.dropdown__menu-item').next().hide();
-             $('.dropdown__menu-item').hide();
+     event.stopPropagation();
+     // $('.dropdown__menu-item').next().hide();
+     $('.dropdown__menu-item').hide();
     });
 
     $('.item-name').click(function () {
@@ -61,14 +61,14 @@ $('.button--plus').click(function(){
   $('.item-number__value').val(counter);
 });
 
-    $('.button--minus').click(function(){
-        var counter = parseInt($('.item-number__value').val());
-        if (counter > 0) {
-        counter--;
-        $('.item-number__value').text(counter);
-          $('.item-number').text(counter);
-          $('.item-number__value').val(counter);}
-    });
+$('.button--minus').click(function(){
+    var counter = parseInt($('.item-number__value').val());
+    if (counter > 0) {
+    counter--;
+    $('.item-number__value').text(counter);
+      $('.item-number').text(counter);
+      $('.item-number__value').val(counter);}
+});
 
 // Adjust number of items ENDS
 
