@@ -9,6 +9,23 @@ $(document).ready(function () {
       $('.navigation__item--cart').toggleClass('is-active');
   }); // toggle cart ENDS
 
+      $('.button--confirm').click(function (){
+        $('.dropdown__cart').toggle();
+        $('.navigation__item--cart').removeClass('is-active')
+        $('.dropdown__cart--confirm').toggle();
+        $('.dropdown__timer').toggle();
+
+      });
+
+      $('.button--cancel').click(function (){
+        // $('.dropdown__timer').removeClass('is-visible');
+        // $('.dropdown__cart--confirm').removeClass('is-visible');
+        $('.dropdown__timer').toggle();
+        $('.dropdown__cart--confirm').toggle();
+
+      });
+
+
 // Toggle call staff button
   $('.navigation__item--bell').click(function () {
     // $('.dropdown__help').toggleClass('is-visible');
@@ -36,21 +53,6 @@ $(document).ready(function () {
       $(this).next().toggle();
     });
 
-    $('.button--confirm').click(function (){
-      // $('.dropdown__cart--confirm').toggleClass('is-visible');
-      // $('.dropdown__timer').addClass('is-visible');
-      $('.dropdown__cart--confirm').toggle();
-      $('.dropdown__timer').toggle();
-
-    });
-
-    $('.button--cancel').click(function (){
-      // $('.dropdown__timer').removeClass('is-visible');
-      // $('.dropdown__cart--confirm').removeClass('is-visible');
-      $('.dropdown__timer').toggle();
-      $('.dropdown__cart--confirm').toggle();
-
-    });
 
 //Adjust number of items
 $('.button--plus').click(function(){
