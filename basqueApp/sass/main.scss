@@ -178,7 +178,8 @@ html{
   align-self: center;
   align-items: center;
   justify-content: center;
-  // padding-right: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
   margin: 0.5em;
   background: $secondary-color;
   border-radius: 5px;
@@ -199,40 +200,47 @@ html{
       align-items: stretch;
       flex-flow: row wrap;
       flex: 1;
+      .item-image {
+        position: relative;
+        margin-right: 1em;
+        // margin-left: 1em;
+        width: 80%;
+        // height: 25%;
+        background-size: cover;
+          @include bp(tablet-landscape){
+            width: 100%;
+          }
+          @include bp(desktop){
+            width: 100%;
+          }
+
+      }
+
+      .item-name {
+        margin-right: 1em;
+      }
+
+      .menu-item__button-area {
+        // position: absolute;
+        // display: inline-flex;
+        // flex: 2;
+        // justify-content: center;
+        align-items: center;
+        width: 100%;
+        box-sizing: border-box;
+        // margin: 1em;
+        // padding: 1em;
+        text-align: center;
+        background-color: $primary-color;
+        border: $highlight solid 2px;
+      }
+
     }
   }
 }
 
 
 
-.item-image {
-  position: relative;
-  width: 80%;
-  // height: 25%;
-  background-size: cover;
-    @include bp(tablet-landscape){
-      width: 100%;
-    }
-    @include bp(desktop){
-      width: 100%;
-    }
-
-}
-
-.menu-item__button-area {
-  // position: absolute;
-  // display: inline-flex;
-  // flex: 2;
-  // justify-content: center;
-  align-items: center;
-  width: 100%;
-  box-sizing: border-box;
-  // margin: 1em;
-  // padding: 1em;
-  text-align: center;
-  background-color: $primary-color;
-  border: $highlight solid 2px;
-}
 
 .button {
   background-color: $highlight;
