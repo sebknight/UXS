@@ -50,23 +50,35 @@ $active: #EAA514; //Mustard
 @import url('https://fonts.googleapis.com/css?family=Didact+Gothic');
 $body-font: 'Didact Gothic', sans-serif;
 
-html{
-  @include zero-margin;
-  min-height: 1000px;
-  box-sizing: border-box;
-}
-.page {
+// html{
+//   @include zero-margin;
+//   height: 100vh;
+//   box-sizing: border-box;
+//   overflow: hidden;
+// }
+
+// html {
+//   max-height: 500px;
+// }
+
+// body {
+//   height: 100vh;
+//   vertical-align: baseline;
+// }
+body {
   @include user-select(none);
   @include zero-margin;
   // display: block;
   box-sizing: border-box;
+  // overflow: hidden;
   // position: absolute;
   // min-width: calc(100%);
-  min-height: 100%;
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  flex-basis: auto;
+  // min-height: 100vh;
+  // overflow: hidden;
+  // display: flex;
+  // flex: 1;
+  // flex-direction: column;
+  // flex-basis: auto;
   font-family: $body-font;
   color: $text-color;
     @include bp(tablet-landscape){
@@ -81,15 +93,17 @@ html{
   @include zero-margin;
   background-color: $active;
   background-image: url("https://transparenttextures.com/patterns/pineapple-cut.png");
+  // height: 100vh;
+  // overflow: hidden;
   display: flex;
   flex: 1;
   flex-direction: column;
-  min-height: 100%;
+  min-height: 100vh;
   // width: calc(100%);
   // height: calc(100%);
-  // display: flex;
-  // flex: 1;
-  // flex-direction: column;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
 }
 
 .navigation {
@@ -99,14 +113,15 @@ html{
   // flex-direction: column;
   // margin: auto;
   justify-content: space-around;
-  // font-family: $body-font;
+  font-family: $body-font;
   text-align: center;
   align-items: center;
-  overflow: hidden;
+  // overflow: hidden;
+  // clear: both;
 }
 
 .navigation__item {
-      margin: 0;
+      // margin: 0;
       list-style: none;
       display: inline-block;
       padding: 0.5em;
@@ -132,7 +147,8 @@ html{
 .menu {
     width: calc(85%);
             position: relative;
-
+    // height: 100vh;
+    // overflow: hidden;
     // height: calc(100%);
     background: $primary-color;
     border: solid 2px $secondary-color;
@@ -140,7 +156,7 @@ html{
     border-bottom: 0px;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-direction: column;
     flex: 1;
     align-items: center;
@@ -169,32 +185,32 @@ html{
 
 .menu-item {
   @include item-border;
-  display: flex;
+  // display: flex;
   // flex: 2;
   // position: absolute;
   width: 80%;
-  flex-basis: 80%;
+  // flex-basis: 80%;
   text-align: right;
   align-self: center;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   padding-left: 1em;
   padding-right: 1em;
   margin: 0.5em;
   background: $secondary-color;
   border-radius: 5px;
-    @include bp(tablet-portrait){
-      // display: flex;
-      // justify-content: space-between;
-      flex-flow: row wrap;
-      flex-basis: 50%;
-      }
-      @include bp(tablet-landscape){
-        flex-basis: 40%;
-      }
-          @include bp(desktop){
-            flex-basis: 25%;
-          }
+    // @include bp(tablet-portrait){
+    //   // display: flex;
+    //   // justify-content: space-between;
+    //   flex-flow: row wrap;
+    //   flex-basis: 50%;
+    //   }
+    //   @include bp(tablet-landscape){
+    //     flex-basis: 40%;
+    //   }
+    //       @include bp(desktop){
+    //         flex-basis: 25%;
+    //       }
   .dropdown__menu-item {
     @include bp(tablet-portrait){
       align-items: stretch;
