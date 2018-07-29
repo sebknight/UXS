@@ -28,8 +28,8 @@
 
 //Borders
 @mixin item-border {
-border-bottom: $highlight solid 0.3em;
-border-right: $highlight solid 0.3em;
+  border-bottom: $highlight solid 0.3em;
+  border-right: $highlight solid 0.3em;
 }
 
 @mixin zero-margin {
@@ -81,29 +81,36 @@ body {
   // flex-basis: auto;
   font-family: $body-font;
   color: $text-color;
-    @include bp(tablet-landscape){
-      font-size: 120%;
-    }
-    @include bp(desktop){
-      font-size: 150%;
+  @include bp(tablet-landscape){
+    font-size: 120%;
+  }
+  @include bp(desktop){
+    font-size: 150%;
   }
 }
 
 .container {
+  @include user-select(none);
   @include zero-margin;
   background-color: $active;
   background-image: url("https://transparenttextures.com/patterns/pineapple-cut.png");
   // height: 100vh;
   // overflow: hidden;
+  box-sizing: border-box;
   display: flex;
   flex: 1;
   flex-direction: column;
   min-height: 100vh;
   // width: calc(100%);
   // height: calc(100%);
-  display: flex;
-  flex: 1;
-  flex-direction: column;
+    font-family: $body-font;
+  color: $text-color;
+    @include bp(tablet-landscape){
+      font-size: 120%;
+    }
+    @include bp(desktop){
+      font-size: 150%;
+  }
 }
 
 .navigation {
@@ -121,12 +128,12 @@ body {
 }
 
 .navigation__item {
-      // margin: 0;
-      list-style: none;
-      display: inline-block;
-      padding: 0.5em;
-      background: $highlight;
-      }
+  // margin: 0;
+  list-style: none;
+  display: inline-block;
+  padding: 0.5em;
+  background: $highlight;
+}
 
 .navigation__item--big{
   display: none;
@@ -136,52 +143,50 @@ body {
 }
 
 .dropdown {
-      @include zero-margin;
-      display: none;
-      align-items: center;
-      align-content: center;
-      background: $secondary-color;
-    }
+  @include zero-margin;
+  display: none;
+  align-items: center;
+  align-content: center;
+  background: $secondary-color;
+}
 
 
 .menu {
-    width: calc(85%);
-            position: relative;
-    // height: 100vh;
-    // overflow: hidden;
-    // height: calc(100%);
-    background: $primary-color;
-    border: solid 2px $secondary-color;
-    border-top: 0px;
-    border-bottom: 0px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: column;
-    flex: 1;
-    align-items: center;
-      @include bp(tablet-landscape){
-        // display: flex;
-        // width: 30%;
-        // flex-flow: row wrap;
-        // justify-content: space-between;
-        // flex-basis: 30%;
-        // flex: 1;
-      }
-      @include bp(desktop){
-        // width: 95%;
-      }
-    // justify-content: flex-end;
-    // overflow: hidden;
-
+  width: calc(85%);
+  position: relative;
+  // height: 100vh;
+  // overflow: hidden;
+  // height: calc(100%);
+  background: $primary-color;
+  border: solid 2px $secondary-color;
+  border-top: 0px;
+  border-bottom: 0px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+  @include bp(tablet-landscape){
+    // display: flex;
+    // width: 30%;
+    // flex-flow: row wrap;
+    // justify-content: space-between;
+    // flex-basis: 30%;
+    // flex: 1;
   }
-
-      .menu__heading {
-        text-align: center;
-        // padding-left: 25%;
-        // display: flex;
-        // align-self: center;
-      }
+  @include bp(desktop){
+    // width: 95%;
+  }
+// justify-content: flex-end;
+// overflow: hidden;
+  .menu__heading {
+    text-align: center;
+    // padding-left: 25%;
+    // display: flex;
+    // align-self: center;
+  }
+}
 
 .menu-item {
   @include item-border;
@@ -223,40 +228,36 @@ body {
         width: 80%;
         // height: 25%;
         background-size: cover;
-          @include bp(tablet-landscape){
-            width: 100%;
-          }
-          @include bp(desktop){
-            width: 100%;
-          }
-
+        @include bp(tablet-landscape){
+          width: 100%;
+          // display: block;
+        }
+        @include bp(desktop){
+          width: 100%;
+          // display: block;
+        }
       }
-
       .item-name {
         margin-right: 1em;
       }
-
-      .menu-item__button-area {
-        // position: absolute;
-        // display: inline-flex;
-        // flex: 2;
-        // justify-content: center;
-        align-items: center;
-        width: 100%;
-        box-sizing: border-box;
-        // margin: 1em;
-        // padding: 1em;
-        text-align: center;
-        background-color: $primary-color;
-        border: $highlight solid 2px;
-      }
-
     }
   }
 }
 
-
-
+.menu-item__button-area {
+  // position: absolute;
+  display: inline-flex;
+  flex: 2;
+  // justify-content: center;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  // margin: 1em;
+  // padding: 1em;
+  text-align: center;
+  background-color: $primary-color;
+  border: $highlight solid 2px;
+}
 
 .button {
   background-color: $highlight;
@@ -281,6 +282,6 @@ body {
         // }
 
 .is-active {
-        color: $primary-color;
-        background: $active;
-      }
+  color: $primary-color;
+  background: $active;
+}
