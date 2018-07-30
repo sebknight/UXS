@@ -82,8 +82,9 @@ body {
   margin: 0;
   padding: 0;
   background: #F97A32;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   font-family: "Didact Gothic", sans-serif;
   text-align: center;
   -webkit-box-align: center;
@@ -91,19 +92,37 @@ body {
           align-items: center;
 }
 
+.navigation .button {
+  background-color: #53C4AD;
+  border: #53C4AD solid 2px;
+  font-family: "Didact Gothic", sans-serif;
+  padding: 0.5em;
+  margin: 1em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .navigation__item {
+  border-radius: 5px;
   list-style: none;
   display: inline-block;
   padding: 0.5em;
   background: #53C4AD;
 }
 
-.navigation__item--big {
+@media (min-width: 600px) {
+  .navigation__item--language {
+    display: none;
+  }
+}
+
+.navigation__item__big, .navigation__item__big--language {
   display: none;
 }
 
 @media (min-width: 600px) {
-  .navigation__item--big {
+  .navigation__item__big, .navigation__item__big--language {
     display: inline;
   }
 }
@@ -151,8 +170,9 @@ body {
 }
 
 .menu-item {
-  border-bottom: #53C4AD solid 0.3em;
-  border-right: #53C4AD solid 0.3em;
+  -webkit-box-shadow: #53C4AD 0.4em 0.4em;
+          box-shadow: #53C4AD 0.4em 0.4em;
+  border-radius: 5px;
   width: 80%;
   text-align: right;
   -ms-flex-item-align: center;
@@ -168,7 +188,48 @@ body {
   padding-right: 1em;
   margin: 0.5em;
   background: #F97A32;
+}
+
+.menu-item .menu-item__button-area {
   border-radius: 5px;
+  position: relative;
+  margin-bottom: 1em;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  background-color: #FFFDED;
+}
+
+@media (max-width: 499px) {
+  .menu-item .menu-item__button-area {
+    width: 100%;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -ms-flex-line-pack: distribute;
+        align-content: space-around;
+  }
+}
+
+.menu-item .menu-item__button-area .button {
+  background-color: #53C4AD;
+  border: #53C4AD solid 2px;
+  font-family: "Didact Gothic", sans-serif;
+  padding: 0.5em;
+  margin: 1em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media (min-width: 600px) {
@@ -184,59 +245,33 @@ body {
         -ms-flex: 1;
             flex: 1;
   }
-  .menu-item .dropdown__menu-item .item-image {
-    position: relative;
-    margin-right: 1em;
-    width: 80%;
-    background-size: cover;
-  }
 }
 
-@media (min-width: 600px) and (min-width: 900px) {
-  .menu-item .dropdown__menu-item .item-image {
-    width: 100%;
-  }
-}
-
-@media (min-width: 600px) and (min-width: 1200px) {
-  .menu-item .dropdown__menu-item .item-image {
-    width: 100%;
+@media (max-width: 499px) {
+  .item-image {
+    display: none;
   }
 }
 
 @media (min-width: 600px) {
-  .menu-item .dropdown__menu-item .item-name {
-    margin-right: 1em;
+  .item-image {
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-size: cover;
   }
 }
 
-.menu-item__button-area {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-flex: 2;
-      -ms-flex: 2;
-          flex: 2;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  text-align: center;
-  background-color: #FFFDED;
-  border: #53C4AD solid 2px;
+@media (min-width: 900px) {
+  .item-image {
+    width: 100%;
+  }
 }
 
-.button {
-  background-color: #53C4AD;
-  border: #53C4AD solid 2px;
-  font-family: "Didact Gothic", sans-serif;
-  padding: 0.5em;
-  margin: 1em;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+@media (min-width: 1200px) {
+  .item-image {
+    width: 100%;
+  }
 }
 
 .button--order {

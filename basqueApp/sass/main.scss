@@ -3,7 +3,7 @@
 
 @mixin bp($point) {
   @if $point == phone {
-    @media (max-width: 599px) { @content; }
+    @media (max-width: 499px) { @content; }
   }
   @else if $point == tablet-portrait {
     @media (min-width: 600px) { @content; }
@@ -27,14 +27,28 @@
 }
 
 //Borders
-@mixin item-border {
-  border-bottom: $highlight solid 0.3em;
-  border-right: $highlight solid 0.3em;
+@mixin box-shadow {
+  box-shadow: $highlight 0.4em 0.4em;
+  // border-bottom: $highlight solid 0.3em;
+  // border-right: $highlight solid 0.3em;
+}
+
+@mixin border {
+  border-radius: 5px;
 }
 
 @mixin zero-margin {
   margin: 0;
   padding: 0;
+}
+
+@mixin button {
+  background-color: $highlight;
+  border: $highlight solid 2px;
+  font-family: $body-font;
+  padding: 0.5em;
+  margin: 1em;
+  align-items: center;
 }
 
 
@@ -119,29 +133,38 @@ body {
   // display: flex;
   // flex-direction: column;
   // margin: auto;
-  justify-content: space-around;
+  justify-content: space-evenly;
   font-family: $body-font;
   text-align: center;
   align-items: center;
   // overflow: hidden;
   // clear: both;
+  .button {
+    @include button;
+  }
 }
 
 .navigation__item {
+  @include border;
   // margin: 0;
   list-style: none;
   display: inline-block;
   padding: 0.5em;
   background: $highlight;
+  
 }
+  .navigation__item--language {
+      @include bp(tablet-portrait){
+        display: none;
+      }
+    }
 
-.navigation__item--big{
+.navigation__item__big, .navigation__item__big--language {
   display: none;
   @include bp(tablet-portrait) {
     display: inline;
   }
 }
-
 .dropdown {
   @include zero-margin;
   display: none;
@@ -189,7 +212,8 @@ body {
 }
 
 .menu-item {
-  @include item-border;
+  @include box-shadow;
+  @include border;
   // display: flex;
   // flex: 2;
   // position: absolute;
@@ -203,7 +227,6 @@ body {
   padding-right: 1em;
   margin: 0.5em;
   background: $secondary-color;
-  border-radius: 5px;
     // @include bp(tablet-portrait){
     //   // display: flex;
     //   // justify-content: space-between;
@@ -216,18 +239,59 @@ body {
     //       @include bp(desktop){
     //         flex-basis: 25%;
     //       }
+  .menu-item__button-area {
+  @include border;
+  position: relative;
+  margin-bottom: 1em;
+  display: inline-flex;
+  flex: 2;
+  justify-content: right;
+  align-items: center;
+  // width: 100%;
+  // box-sizing: border-box;
+  // margin: 1em;
+  // padding: 1em;
+  text-align: center;
+  background-color: $primary-color;
+    @include bp(phone){
+      // background-color: $secondary-color;
+      width: 100%;
+      // position: absolute;
+      // padding-left: 0;
+      // padding-right: 0;
+      // margin-left: 0;
+      // margin-right: 0;
+      justify-content: flex-start;
+      align-content: space-around;
+    }
+  .button {
+    @include button;
+  }    
+  // border: $highlight solid 2px;
+}
+    
   .dropdown__menu-item {
     @include bp(tablet-portrait){
       align-items: stretch;
       flex-flow: row wrap;
       flex: 1;
+    }
+  } //dropdown menu item ends
+
+}
+
       .item-image {
-        position: relative;
-        margin-right: 1em;
-        // margin-left: 1em;
-        width: 80%;
-        // height: 25%;
-        background-size: cover;
+        @include bp(phone){
+          display: none;
+        }
+        @include bp(tablet-portrait){
+          position: relative;
+          // margin-right: 1em;
+          // margin-left: 1em;
+          width: 100%;
+          height: auto;
+          background-size: cover;
+        }
         @include bp(tablet-landscape){
           width: 100%;
           // display: block;
@@ -236,41 +300,14 @@ body {
           width: 100%;
           // display: block;
         }
-      }
-      .item-name {
-        margin-right: 1em;
-      }
-    }
-  }
-}
+      } 
 
-.menu-item__button-area {
-  // position: absolute;
-  display: inline-flex;
-  flex: 2;
-  // justify-content: center;
-  align-items: center;
-  width: 100%;
-  box-sizing: border-box;
-  // margin: 1em;
-  // padding: 1em;
-  text-align: center;
-  background-color: $primary-color;
-  border: $highlight solid 2px;
-}
 
-.button {
-  background-color: $highlight;
-  border: $highlight solid 2px;
-  font-family: $body-font;
-  padding: 0.5em;
-  margin: 1em;
-  align-items: center;
-}
+
 
 .button--order {
   margin-left: 3em;
-}
+} 
 
 // JQuery states
 // .is-visible {

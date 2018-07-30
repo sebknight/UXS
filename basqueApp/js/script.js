@@ -38,7 +38,7 @@ $(document).ready(function () {
   $('.navigation__item--language').click(function (){
     $(this).text($(this).text() == 'MĀO' ? 'ENG' : 'MĀO');
   });
-  // $('.navigation__item--big--language').click(function (){
+  // $('.navigation__item__big--language').click(function (){
   //   $(this).text($(this).text() == 'Te Reo Maori' ? 'English' : 'Te Reo Maori');
   // });  // toggle language ENDS
 
