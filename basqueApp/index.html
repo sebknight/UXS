@@ -7,15 +7,18 @@
     <!-- <link rel="stylesheet" href="css/reset.css"> -->
     <title>Basque</title>
   </head>
-  <body>
+  <body class="page">
     <div class="container">
       <nav class="navigation">
         <ul>
-            <li class="navigation__item navigation__item--bell"><i class="fas fa-bell"></i><h3 class="navigation__item__big"> Call staff</h3></li>
-            <li class="navigation__item navigation__item--cart"><i class="fas fa-utensils"></i><h3 class="navigation__item__big"> Your order</h3></li>
-            <li class="navigation__item navigation__item--language">ENG
-              <h3 class="navigation__item__big--language">English</h3>
+            <!-- <li class="navigation__item navigation__item--logo"></li> -->
+            <li class="navigation__item navigation__item--bell"><i class="fas fa-bell"></i><p class="navigation__item__big"> Call staff</p></li>
+            <li class="navigation__item navigation__item--cart"><i class="fas fa-utensils"></i><p class="navigation__item__big"> Your order</p></li>
+            <li class="navigation__item navigation__item--language"> 
+              English
+              <!-- <h3 class="navigation__item__big--language">English</h3> -->
             </li>
+            
         </ul>
       </nav>
       <!-- nav ENDS -->
@@ -38,14 +41,15 @@
       <!-- menu begins -->
       <div class="menu">
         <div class="menu__heading">
-          <h1>Welcome to Basque!</h1>
-          <h3>Check out our featured items</h3>
+          <h1 class="menu__heading menu__heading--title">Welcome to Basque!</h1>
+          <h3 class="menu__heading menu__heading--subtitle">Check out our featured items</h3>
         </div>
         <div class="menu-item menu-item__almonds">
-          <h3 class="item-name item-name--almonds">Spiced Almonds (v, gf) $9</h3>
+          <h3 class="item-name item-name--almonds">Spiced Almonds (v, gf)
+            <br> $9</h3>
           <div class="dropdown dropdown__menu-item dropdown__menu-item--almonds">
             <img class="item-image item-image--almonds" src="images/almonds-sq.png" alt="Spiced almonds">
-            <h3>Vegan, gluten-free</h3>
+            <h3>Freshly toasted</h3>
             <div class="menu-item__button-area">
               <button type="button" name="order" class="button button--minus"><i class="fas fa-minus"></i></button>
               <h2 class="item-number">1</h2>
@@ -59,10 +63,10 @@
         </div>
         <!-- almonds ENDS -->
         <div class="menu-item menu-item__platter">
-          <h3 class="item-name item-name--platter">Carne Platter $18</h3>
+          <h3 class="item-name item-name--platter">Carne Platter <br>$18</h3>
           <div class="dropdown dropdown__menu-item dropdown__menu-item--platter">
             <img class="item-image item-image--platter" src="images/platter-sq.png" alt="carne platter">
-            <h3>Selected meats, cheeses, and breads</h3>
+            <h3>Meats, cheeses, breads</h3>
           <div class="menu-item__button-area">
             <button type="button" name="order" class="button button--minus"><i class="fas fa-minus"></i></button>
             <h2 class="item-number">1</h2>
@@ -76,10 +80,10 @@
         </div>
         <!-- platter ENDS -->
         <div class="menu-item menu-item__pizza">
-          <h3 class="item-name item-name--pizza">Pizza Bread (vg) $12</h3>
+          <h3 class="item-name item-name--pizza">Pizza Bread (vg) <br> $12</h3>
           <div class="dropdown dropdown__menu-item dropdown__menu-item--pizza">
             <img class="item-image item-image--pizza" src="images/pizza-sq.png" alt="pizza bread">
-            <h3>with mozzarella and basil</h3>
+            <h3>With mozzarella and basil</h3>
             <div class="menu-item__button-area">
               <button type="button" name="order" class="button button--minus"><i class="fas fa-minus"></i></button>
               <h2 class="item-number">1</h2>
@@ -93,10 +97,10 @@
         </div>
         <!-- menu item ENDS -->
         <div class="menu-item menu-item__crema">
-          <h3 class="item-name item-name--crema">Crema Catalana (vg, gf) $9</h3>
+          <h3 class="item-name item-name--crema">Crema Catalana (vg, gf) <br> $9</h3>
           <div class="dropdown dropdown__menu-item dropdown__menu-item--crema">
             <img class="item-image item-image--crema" src="images/creama-sq.png" alt="almonds">
-            <h3>Spanish custard</h3>
+            <h3>Spanish custard cream</h3>
             <div class="menu-item__button-area">
               <button type="button" name="order" class="button button--minus"><i class="fas fa-minus"></i></button>
               <h2 class="item-number">1</h2>
@@ -110,10 +114,10 @@
         </div>
         <!-- crema ENDS -->
         <div class="menu-item menu-item__sangria">
-          <h3 class="item-name item-name--sangria">Classic Sangria $18</h3>
+          <h3 class="item-name item-name--sangria">Classic Sangria <br>$18</h3>
           <div class="dropdown dropdown__menu-item dropdown__menu-item--sangria">
             <img class="item-image item-image--sangria" src="images/sangria-sq.png" alt="classic sangria">
-            <h3>Red wine, summer fruits and juice</h3>
+            <h3>Red wine, fruit, juice</h3>
             <div class="menu-item__button-area">
               <button type="button" name="order" class="button button--minus"><i class="fas fa-minus"></i></button>
               <h2 class="item-number">1</h2>
@@ -127,7 +131,7 @@
         </div>
         <!-- sangria ENDS -->
         <div class="menu-item menu-item__beer">
-          <h3 class="item-name item-name--beer">Angry Peaches APA $10</h3>
+          <h3 class="item-name item-name--beer">Angry Peaches APA <br> $10</h3>
           <div class="dropdown dropdown__menu-item dropdown__menu-item--beer">
             <img class="item-image item-image--beer" src="images/beer-sq.png" alt="Angry Peaches APA">
             <h3>Brewed by Garage Project</h3>
@@ -143,10 +147,10 @@
           <!-- dropdown ENDS -->
         </div>
         <!-- beer ENDS -->
-        <div class="menu-item menu-item__cider">
+        <!-- <div class="menu-item menu-item__cider">
           <h3 class="item-name item-name--cider">Sidra del Verano $14</h3>
-          <div class="dropdown dropdown__menu-item dropdown__menu-item--beer">
-            <img class="item-image item-image--beer" src="images/beer-sq.png" alt="Angry Peaches APA">
+          <div class="dropdown dropdown__menu-item dropdown__menu-item--cider">
+            <img class="item-image item-image--cider" src="images/cider-sq.png" alt="Angry Peaches APA">
             <h3>Authentic Spanish cider</h3>
             <div class="menu-item__button-area">
               <button type="button" name="order" class="button button--minus">
@@ -162,7 +166,7 @@
             <!-- buttons END -->
           </div>
           <!-- dropdown ENDS -->
-        </div>        
+        </div>      
       </div>
     <!-- menu ENDS -->
     </div>
